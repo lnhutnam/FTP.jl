@@ -1,10 +1,3 @@
-module FTP
-
-using LinearAlgebra
-
-# Write your package code here.
-using Random, LinearAlgebra, Plots
-
 function fun_val(A, x)
     m = size(A, 1)  # Number of rows in A
     y = 0.0
@@ -24,9 +17,4 @@ function weaksub(A, x)
     K = C ./ N
     z = sum(K, dims=1)[:]
     return z
-end
-
-export fun_val
-export weaksub
-
 end
